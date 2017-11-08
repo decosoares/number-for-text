@@ -4,8 +4,8 @@ class NumberText
 
     public static function valorPorExtenso( $valor = 0, $bolExibirMoeda = true, $bolPalavraFeminina = false )
     {
-        if($valor < 0){
-            throw new Exception("Número não pode ser negativo", 1);            
+        if($valor < 0 || empty($valor)){
+            throw new Exception("Número deve ser informado e não pode ser negativo.", 1);
         }
 
         $valor = self::removerFormatacaoNumero( $valor );
