@@ -1,0 +1,23 @@
+{
+    "name" : "andresoares/number-for-text",
+    "description" : "Converte números para forma escrita. Números por extenso.",
+    "type" : "library",
+    "version" : "1.0",
+    "authors" : [
+        {
+            "name" : "Andre Soares",
+            "role" : "creator"
+        }
+    ],
+    "require" : {
+        "php" : ">5.4"
+    },
+    "minimun-stability" : "dev",
+    "autoload" : {
+        "psr-4" : {
+            "NumberForText\\NumberPtBr\\" : [
+                "src/NumberForText/NumberPtBr"
+            ]
+        }
+    }
+}
