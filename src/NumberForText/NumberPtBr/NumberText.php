@@ -4,6 +4,9 @@ class NumberText
 
     public static function valorPorExtenso( $valor = 0, $bolExibirMoeda = true, $bolPalavraFeminina = false )
     {
+        if($valor < 0){
+            throw new Exception("Número não pode ser negativo", 1);            
+        }
 
         $valor = self::removerFormatacaoNumero( $valor );
 
@@ -92,9 +95,6 @@ class NumberText
 
     public static function removerFormatacaoNumero( $strNumero )
     {
-        if($strNumero > 0){
-            throw new Exception("Número deve ser maior ou igual a Zero", 1);            
-        }
 
         $strNumero = trim( str_replace( "R$", null, $strNumero ) );
 
