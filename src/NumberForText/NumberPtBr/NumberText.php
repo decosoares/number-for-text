@@ -1,4 +1,7 @@
 <?php
+
+namespace NumberForText\NumberPtBr;
+
 class NumberText
 {
 
